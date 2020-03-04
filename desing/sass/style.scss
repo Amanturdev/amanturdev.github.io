@@ -1,0 +1,131 @@
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  padding: 0 !important ;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.menu{
+  height: 100vh;
+  background: red;
+  padding: 10px;
+  padding-top: 50px !important;
+  color: #ffffff;
+  padding-bottom: 110px;
+}
+.wrapper{
+  width: 1100px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  & .main{
+    min-height: 100vh;
+    background: #000;
+    padding: 10px;
+    padding-top: 40px !important;
+    color: white;
+  }
+}
+footer {
+  width: 1100px;
+  margin: 0 auto;
+  height: 0;
+  overflow: hidden;
+  background: dodgerblue;
+  position: fixed;
+  bottom: 0px !important;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  transition: .1s  ease-in-out;
+}
+header {
+  width: 1100px;
+  height: 40px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: dodgerblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+  header{
+    width: 100vw;
+  }
+  footer{
+    width: 100vw;
+  }
+  .wrapper{
+    width: 100vw !important;
+    & .main{
+      padding-bottom: 50px;
+    }
+    .menu{
+      padding-bottom: 50px;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .wrapper{
+    width: 100vw !important;
+    & .main{
+      padding-bottom: 50px;
+    }
+
+  }
+  footer{
+    height: 50px !important;
+  }
+}
+
+
