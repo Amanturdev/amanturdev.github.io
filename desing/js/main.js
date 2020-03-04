@@ -3,7 +3,7 @@ const tabs = document.querySelectorAll('.tab');
 var slideout = new Slideout({
     'panel': document.getElementById('main'),
     'menu': document.getElementById('menu'),
-    'padding': 280,
+    'padding': 300,
     'tolerance': 70,
     'easing': 'ease-in-out'
 });
