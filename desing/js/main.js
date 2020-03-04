@@ -5,7 +5,7 @@ var slideout = new Slideout({
     'menu': document.getElementById('menu'),
     'padding': 280,
     'tolerance': 70,
-    'easing': 'cubic-bezier(.48,.06,.56,.99)'
+    'easing': 'ease-in-out'
 });
 document.querySelector('.main').addEventListener('click', function() {
     slideout.close();
