@@ -45,21 +45,22 @@ html{
 }
 
 .menu{
-  min-height: 100vh;
-
+  height: 100vh;
+  overflow-x: hidden;
+  padding-top: 40px;
 }
 .wrapper{
+  overflow-x: hidden;
   width: 1100px;
   margin: 0 auto;
-  overflow-x: hidden;
   & .main{
     min-height: 100vh;
     background: #000;
-    padding: 10px;
-    padding-top: 40px !important;
-    color: white;
+    display: flex;
+    padding-top: 40px;
   }
 }
+
 footer {
   width: 1100px;
   margin: 0 auto;
@@ -220,12 +221,11 @@ header {
     width: 100vw;
   }
   .wrapper{
-    width: 100vw !important;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
     & .main{
-      padding-bottom: 50px;
-    }
-    .menu{
-      padding-bottom: 50px;
+      width: 100% !important;
     }
   }
 }
@@ -236,6 +236,10 @@ header {
       padding-bottom: 50px;
     }
 
+  }
+  .sidebar-footer {
+    width: 280px;
+    bottom: 50px !important;
   }
   footer{
     height: 50px !important;
@@ -293,9 +297,8 @@ body {
 .page-wrapper .page-content,
 .sidebar-wrapper .sidebar-search input.search-menu,
 .sidebar-wrapper .sidebar-search .input-group-text,
-.sidebar-wrapper .sidebar-menu ul li a,
-#show-sidebar,
-#close-sidebar {
+.sidebar-wrapper .sidebar-menu ul li a
+{
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -310,7 +313,8 @@ body {
 
 .sidebar-wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 90px) !important;
+
 }
 
 .sidebar-wrapper ul {
@@ -507,10 +511,10 @@ body {
 /*--------------------------side-footer------------------------------*/
 
 .sidebar-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 50px;
+  position: fixed;
+  width: 280px;
   display: flex;
+  bottom: 0;
 }
 
 .sidebar-footer > a {
