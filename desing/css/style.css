@@ -113,7 +113,7 @@ header .logo-in img {
   justify-content: space-between;
   padding: 0 20px;
   width: 100%;
-  height: 50px;
+  height: 40px;
 }
 
 .tab {
@@ -137,7 +137,7 @@ header .logo-in img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 5px;
   margin: 5px;
   transition: background 0.3s ease-in-out;
   outline: none;
@@ -187,8 +187,8 @@ header .logo-in img {
   }
 
   .tab {
-    padding: 15px;
-    margin: 3px;
+    padding: 10px;
+    margin: 5px;
   }
 
   .tab i {
@@ -201,7 +201,7 @@ header .logo-in img {
   }
 
   .tab {
-    padding: 10px;
+    padding: 6px;
     margin: 3px;
   }
 
@@ -233,16 +233,16 @@ header .logo-in img {
     width: 100vw !important;
   }
   .wrapper .main {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 
   .sidebar-footer {
     width: 280px;
-    bottom: 50px !important;
+    bottom: 40px !important;
   }
 
   footer {
-    height: 50px !important;
+    height: 40px !important;
   }
 }
 @keyframes swing {
