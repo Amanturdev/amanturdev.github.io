@@ -158,7 +158,7 @@ header .logo-in img {
 /*  font-size: 1.2em;*/
 /*}*/
 :root {
-  --tab-color: rgba(13, 109, 255, 1);
+  --tab-color: rgba(33, 150, 243, 1);
   --tab-active-color: rgba(13, 109, 255, 0.2);
 }
 
