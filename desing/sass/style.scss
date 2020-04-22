@@ -138,6 +138,7 @@ header {
   justify-content: center;
   padding: 10px;
   margin: 5px;
+  margin-top: 7px;
   transition: background 0.3s ease-in-out;
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -155,19 +156,23 @@ header {
 /*  font-size: 1.2em;*/
 /*}*/
 
+:root{
+  --tab-color: rgba(13, 109, 255, 1);
+  --tab-active-color: rgba(13, 109, 255, 0.2);
+}
 
 .tab.teal .svg-icon path,.tab-menu.teal .svg-icon{
-  fill: rgba(28, 150, 162, 1);
-  stroke: rgba(28, 150, 162, 1);
+  fill: var(--tab-color);
+  stroke: var(--tab-color);
 }
 .tab.teal .svg-icon-search path {
-  stroke: rgba(28, 150, 162, 1);
+  stroke: var(--tab-color);
 }
 
 
 .tab.active.teal {
-  background-color: rgba(28, 150, 162, 0.2);
-  color: rgba(28, 150, 162, 1);
+  background-color: var(--tab-active-color);
+  color: var(--tab-color);
   outline: none;
 }
 
