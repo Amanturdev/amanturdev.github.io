@@ -160,6 +160,7 @@ header .logo-in img {
 :root {
   --tab-color: rgba(33, 150, 243, 1);
   --tab-active-color: rgba(13, 109, 255, 0.2);
+  --tab-white: #ffffff;
 }
 
 .tab.teal .svg-icon path, .tab-menu.teal .svg-icon {
@@ -172,14 +173,14 @@ header .logo-in img {
 }
 
 .tab.active.teal {
-  background-color: var(--tab-active-color);
-  color: var(--tab-color);
+  background-color: var(--tab-color);
+  color: var(--tab-white);
   outline: none;
 }
 
 .tab.active.teal .svg-icon path {
-  fill: #1c96a2;
-  stroke: #1c96a2;
+  fill: var(--tab-white);
+  stroke: var(--tab-white);
 }
 
 .tab.active.teal .svg-icon-search path {
