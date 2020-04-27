@@ -55,7 +55,7 @@ html{
   margin: 0 auto;
   & .main{
     min-height: 100vh;
-    background: #000;
+    background: RGBA(231, 239, 250, 1);
     display: flex;
     padding-top: 40px;
   }
@@ -90,14 +90,19 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  color: #fff;
+  justify-content: flex-start;
+  padding-left: 20px;
   & .logo-in{
     display: flex;
     & img{
       width: 40px;
       height: 40px;
     }
+  }
+  & .slot{
+    margin-left: 10px;
+    font-weight: bold;
+    font-family: "GT Eesti Pro Display";
   }
 }
 
