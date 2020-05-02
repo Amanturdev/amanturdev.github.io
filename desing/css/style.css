@@ -790,6 +790,13 @@ a, a:hover, a:active, a:focus {
   font-family: "Yandex Sans Text";
 }
 
+.div_border {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 480px) {
   .user_between {
     justify-content: space-evenly;
