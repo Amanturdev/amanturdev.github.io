@@ -7,9 +7,13 @@
     <meta name="MobileOptimized" content="320">
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="fonts/Yandex-font/stylesheet.css">
+    <link rel="stylesheet" href="fonts/fontawesome/all.min.css">
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,281 +24,365 @@
 </head>
 <body>
 <div id="swup" class="trasition-fade">
-<header>
-    <div class="logo-in">
-        <svg id="Layer_1" enable-background="new 0 0 496 496" height="30" viewBox="0 0 496 496" width="40"
-             xmlns="http://www.w3.org/2000/svg">
-            <path d="m480 268v57c0 13.25-10.75 24-24 24h-416c-13.25 0-24-10.75-24-24v-57c0-13.25 10.75-24 24-24h37.08l52.66-85.58c4.37-7.1 12.11-11.42 20.44-11.42h59.82l6.26-32.53c2.17-11.3 12.06-19.47 23.56-19.47h16.36c11.5 0 21.39 8.17 23.56 19.47l6.26 32.53h44.42c8.33 0 16.07 4.32 20.44 11.42.219.356 52.433 85.208 52.66 85.58h52.48c13.25 0 24 10.75 24 24z"
-                  fill="#d1e7ff"/>
-            <path d="m403.38 243.77c-.591.358 15.176.23-326.3.23l52.66-85.58c4.37-7.1 12.11-11.42 20.44-11.42h180.24c8.33 0 16.07 4.32 20.44 11.42z"
-                  fill="#d1e7ff"/>
-            <path d="m350.86 158.42c7.016 11.401-1.186 26.08-14.573 26.08h-115.512c-28.902 0-55.735 14.993-70.883 39.607l-12.242 19.893h-60.57l52.66-85.58c4.37-7.1 12.11-11.42 20.44-11.42h180.24c8.33 0 16.07 4.32 20.44 11.42z"
-                  fill="#e8f3ff"/>
-            <path d="m404.99 349c-.26 28.76-23.67 52-52.49 52s-52.23-23.24-52.49-52c-1.482-25.164 20.702-53 52.49-53 31.776 0 53.971 27.846 52.49 53z"
-                  fill="#8bc4ff"/>
-            <g fill="#a2d0ff">
-                <path d="m195.99 349c-.26 28.76-23.67 52-52.49 52-29.054 0-52.5-23.581-52.5-52.5 0-28.99 23.51-52.5 52.5-52.5 31.776 0 53.971 27.846 52.49 53z"/>
-                <path d="m160.998 298.988c6.663 2.356 5.016 12.145-2.052 12.14-27.426-.019-52.955 21.783-52.775 52.85.041 7.007-9.702 8.904-12.077 2.312-14.916-41.397 25.234-82.035 66.904-67.302z"/>
-                <path d="m369.998 298.988c6.663 2.356 5.016 12.145-2.052 12.14-27.426-.019-52.955 21.783-52.775 52.85.041 7.007-9.702 8.904-12.077 2.312-15.02-41.686 25.527-81.932 66.904-67.302z"/>
-            </g>
-            <path d="m456.352 267h-334.352c-40.593 0-73.5 32.907-73.5 73.5 0 15.852-32.5 8.615-32.5-15.5v-57c0-13.255 10.745-24 24-24h142v-97h32v97h69v-97h32v97c149.651 0 141.27-.016 142.203.03 14.759.729 13.927 22.97-.851 22.97z"
-                  fill="#e8f3ff"/>
-            <path d="m279.744 114.468 6.256 32.532h-76l6.256-32.532c2.173-11.301 12.061-19.468 23.568-19.468h16.351c11.508 0 21.396 8.167 23.569 19.468z"
-                  fill="#e8f3ff"/>
-            <path d="m480 228h-67.54l-55.006-89.386c-2.912-4.731-8.071-7.614-13.627-7.614h-44.611l-7.504-39.021c-1.448-7.534-8.04-12.979-15.712-12.979h-56c-7.672 0-14.264 5.445-15.712 12.979l-7.504 39.021h-60.014c-5.556 0-10.715 2.883-13.627 7.614l-55.006 89.386h-52.137c-8.837 0-16 7.163-16 16v105c0 8.837 7.163 16 16 16h61.022c7.405 29.825 34.395 52 66.478 52s59.073-22.175 66.478-52h76.043c7.405 29.825 34.395 52 66.478 52s59.073-22.175 66.478-52h61.023c8.837 0 16-7.163 16-16v-105c0-8.837-7.163-16-16-16zm-105.114 0h-59.886v-65h19.887zm-160.886 0v-65h69v65zm19.216-117h29.568l3.846 20h-37.26zm-87.506 52h36.29v65h-76.29zm-2.21 222c-20.126 0-36.5-16.374-36.5-36.5s16.374-36.5 36.5-36.5 36.5 16.374 36.5 36.5-16.374 36.5-36.5 36.5zm209 0c-20.126 0-36.5-16.374-36.5-36.5s16.374-36.5 36.5-36.5 36.5 16.374 36.5 36.5-16.374 36.5-36.5 36.5zm66.71-52c-7.045-30.327-34.27-53-66.71-53s-59.665 22.673-66.71 53h-75.58c-7.045-30.327-34.27-53-66.71-53s-59.665 22.673-66.71 53h-44.79v-73h432v14h-14c-8.837 0-16 7.163-16 16s7.163 16 16 16h14v27zm-145.21-42c0 8.837-7.163 16-16 16h-15c-8.837 0-16-7.163-16-16s7.163-16 16-16h15c8.837 0 16 7.163 16 16zm-130.5 38c-10.752 0-19.5 8.748-19.5 19.5s8.748 19.5 19.5 19.5 19.5-8.748 19.5-19.5-8.748-19.5-19.5-19.5zm209 0c-10.752 0-19.5 8.748-19.5 19.5s8.748 19.5 19.5 19.5 19.5-8.748 19.5-19.5-8.748-19.5-19.5-19.5z"
-                  fill="#2e58ff"/>
-        </svg>
-    </div>
-    <div class="slot">
-        Home page
-    </div>
+    <header>
+        <div class="logo-in">
+            <svg id="Layer_1" enable-background="new 0 0 496 496" height="30" viewBox="0 0 496 496" width="40"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="m480 268v57c0 13.25-10.75 24-24 24h-416c-13.25 0-24-10.75-24-24v-57c0-13.25 10.75-24 24-24h37.08l52.66-85.58c4.37-7.1 12.11-11.42 20.44-11.42h59.82l6.26-32.53c2.17-11.3 12.06-19.47 23.56-19.47h16.36c11.5 0 21.39 8.17 23.56 19.47l6.26 32.53h44.42c8.33 0 16.07 4.32 20.44 11.42.219.356 52.433 85.208 52.66 85.58h52.48c13.25 0 24 10.75 24 24z"
+                      fill="#d1e7ff"/>
+                <path d="m403.38 243.77c-.591.358 15.176.23-326.3.23l52.66-85.58c4.37-7.1 12.11-11.42 20.44-11.42h180.24c8.33 0 16.07 4.32 20.44 11.42z"
+                      fill="#d1e7ff"/>
+                <path d="m350.86 158.42c7.016 11.401-1.186 26.08-14.573 26.08h-115.512c-28.902 0-55.735 14.993-70.883 39.607l-12.242 19.893h-60.57l52.66-85.58c4.37-7.1 12.11-11.42 20.44-11.42h180.24c8.33 0 16.07 4.32 20.44 11.42z"
+                      fill="#e8f3ff"/>
+                <path d="m404.99 349c-.26 28.76-23.67 52-52.49 52s-52.23-23.24-52.49-52c-1.482-25.164 20.702-53 52.49-53 31.776 0 53.971 27.846 52.49 53z"
+                      fill="#8bc4ff"/>
+                <g fill="#a2d0ff">
+                    <path d="m195.99 349c-.26 28.76-23.67 52-52.49 52-29.054 0-52.5-23.581-52.5-52.5 0-28.99 23.51-52.5 52.5-52.5 31.776 0 53.971 27.846 52.49 53z"/>
+                    <path d="m160.998 298.988c6.663 2.356 5.016 12.145-2.052 12.14-27.426-.019-52.955 21.783-52.775 52.85.041 7.007-9.702 8.904-12.077 2.312-14.916-41.397 25.234-82.035 66.904-67.302z"/>
+                    <path d="m369.998 298.988c6.663 2.356 5.016 12.145-2.052 12.14-27.426-.019-52.955 21.783-52.775 52.85.041 7.007-9.702 8.904-12.077 2.312-15.02-41.686 25.527-81.932 66.904-67.302z"/>
+                </g>
+                <path d="m456.352 267h-334.352c-40.593 0-73.5 32.907-73.5 73.5 0 15.852-32.5 8.615-32.5-15.5v-57c0-13.255 10.745-24 24-24h142v-97h32v97h69v-97h32v97c149.651 0 141.27-.016 142.203.03 14.759.729 13.927 22.97-.851 22.97z"
+                      fill="#e8f3ff"/>
+                <path d="m279.744 114.468 6.256 32.532h-76l6.256-32.532c2.173-11.301 12.061-19.468 23.568-19.468h16.351c11.508 0 21.396 8.167 23.569 19.468z"
+                      fill="#e8f3ff"/>
+                <path d="m480 228h-67.54l-55.006-89.386c-2.912-4.731-8.071-7.614-13.627-7.614h-44.611l-7.504-39.021c-1.448-7.534-8.04-12.979-15.712-12.979h-56c-7.672 0-14.264 5.445-15.712 12.979l-7.504 39.021h-60.014c-5.556 0-10.715 2.883-13.627 7.614l-55.006 89.386h-52.137c-8.837 0-16 7.163-16 16v105c0 8.837 7.163 16 16 16h61.022c7.405 29.825 34.395 52 66.478 52s59.073-22.175 66.478-52h76.043c7.405 29.825 34.395 52 66.478 52s59.073-22.175 66.478-52h61.023c8.837 0 16-7.163 16-16v-105c0-8.837-7.163-16-16-16zm-105.114 0h-59.886v-65h19.887zm-160.886 0v-65h69v65zm19.216-117h29.568l3.846 20h-37.26zm-87.506 52h36.29v65h-76.29zm-2.21 222c-20.126 0-36.5-16.374-36.5-36.5s16.374-36.5 36.5-36.5 36.5 16.374 36.5 36.5-16.374 36.5-36.5 36.5zm209 0c-20.126 0-36.5-16.374-36.5-36.5s16.374-36.5 36.5-36.5 36.5 16.374 36.5 36.5-16.374 36.5-36.5 36.5zm66.71-52c-7.045-30.327-34.27-53-66.71-53s-59.665 22.673-66.71 53h-75.58c-7.045-30.327-34.27-53-66.71-53s-59.665 22.673-66.71 53h-44.79v-73h432v14h-14c-8.837 0-16 7.163-16 16s7.163 16 16 16h14v27zm-145.21-42c0 8.837-7.163 16-16 16h-15c-8.837 0-16-7.163-16-16s7.163-16 16-16h15c8.837 0 16 7.163 16 16zm-130.5 38c-10.752 0-19.5 8.748-19.5 19.5s8.748 19.5 19.5 19.5 19.5-8.748 19.5-19.5-8.748-19.5-19.5-19.5zm209 0c-10.752 0-19.5 8.748-19.5 19.5s8.748 19.5 19.5 19.5 19.5-8.748 19.5-19.5-8.748-19.5-19.5-19.5z"
+                      fill="#2e58ff"/>
+            </svg>
+        </div>
+        <div class="slot">
+            Главная
+        </div>
 
-</header>
-<div class="menu" id="menu">
-    <nav id="sidebar" class="sidebar-wrapper">
-        <div class="sidebar-content">
-            <div class="sidebar-header">
-                <div class="user-pic">
-                    <img class="img-responsive img-rounded"
-                         src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-                         alt="User picture">
-                </div>
-                <div class="user-info">
+    </header>
+    <div class="menu" id="menu">
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded"
+                             src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                             alt="User picture">
+                    </div>
+                    <div class="user-info">
           <span class="user-name">Jhon
             <strong>Smith</strong>
           </span>
-                    <span class="user-role">Administrator</span>
-                    <span class="user-status">
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
             <i class="fa fa-circle"></i>
             <span>Online</span>
           </span>
-                </div>
-            </div>
-            <!-- sidebar-header  -->
-            <!--<div class="sidebar-search">
-                <div>
-                    <div class="input-group">
-                        <input type="text" class="form-control search-menu" placeholder="Search...">
-                        <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </span>
-                        </div>
                     </div>
                 </div>
-            </div>-->
-            <!-- sidebar-search  -->
-            <div class="sidebar-menu">
-                <ul>
-                    <li class="header-menu">
-                        <span>General</span>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fa fa-tachometer-alt"></i>
-                            <span>Dashboard</span>
-                            <span class="badge badge-pill badge-warning">New</span>
-                        </a>
-                        <div class="sidebar-submenu">
-                            <ul>
-                                <li>
-                                    <a href="#">Dashboard 1
-                                        <span class="badge badge-pill badge-success">Pro</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dashboard 3</a>
-                                </li>
-                            </ul>
+                <!-- sidebar-header  -->
+                <!--<div class="sidebar-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="input-group-append">
+                  <span class="input-group-text">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </span>
+                            </div>
                         </div>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span>E-commerce</span>
-                            <span class="badge badge-pill badge-danger">3</span>
-                        </a>
-                        <div class="sidebar-submenu">
-                            <ul>
-                                <li>
-                                    <a href="#">Products
+                    </div>
+                </div>-->
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                                <span class="badge badge-pill badge-warning">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Dashboard 1
+                                            <span class="badge badge-pill badge-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dashboard 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dashboard 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>E-commerce</span>
+                                <span class="badge badge-pill badge-danger">3</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Products
 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Orders</a>
-                                </li>
-                                <li>
-                                    <a href="#">Credit cart</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="far fa-gem"></i>
-                            <span>Components</span>
-                        </a>
-                        <div class="sidebar-submenu">
-                            <ul>
-                                <li>
-                                    <a href="#">General</a>
-                                </li>
-                                <li>
-                                    <a href="#">Panels</a>
-                                </li>
-                                <li>
-                                    <a href="#">Tables</a>
-                                </li>
-                                <li>
-                                    <a href="#">Icons</a>
-                                </li>
-                                <li>
-                                    <a href="#">Forms</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fa fa-chart-line"></i>
-                            <span>Charts</span>
-                        </a>
-                        <div class="sidebar-submenu">
-                            <ul>
-                                <li>
-                                    <a href="#">Pie chart</a>
-                                </li>
-                                <li>
-                                    <a href="#">Line chart</a>
-                                </li>
-                                <li>
-                                    <a href="#">Bar chart</a>
-                                </li>
-                                <li>
-                                    <a href="#">Histogram</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="sidebar-dropdown">
-                        <a href="#">
-                            <i class="fa fa-globe"></i>
-                            <span>Maps</span>
-                        </a>
-                        <div class="sidebar-submenu">
-                            <ul>
-                                <li>
-                                    <a href="#">Google maps</a>
-                                </li>
-                                <li>
-                                    <a href="#">Open street map</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="header-menu">
-                        <span>Extra</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Documentation</span>
-                            <span class="badge badge-pill badge-primary">Beta</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-calendar"></i>
-                            <span>Calendar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-folder"></i>
-                            <span>Examples</span>
-                        </a>
-                    </li>
-                </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Credit cart</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="far fa-gem"></i>
+                                <span>Components</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">General</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Panels</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Forms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-chart-line"></i>
+                                <span>Charts</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Pie chart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Line chart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bar chart</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Histogram</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span>Maps</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Google maps</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Open street map</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Extra</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Documentation</span>
+                                <span class="badge badge-pill badge-primary">Beta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-folder"></i>
+                                <span>Examples</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
             </div>
-            <!-- sidebar-menu  -->
-        </div>
-        <!-- sidebar-content  -->
-        <div class="sidebar-footer">
-            <a href="#">
-                <i class="fa fa-bell"></i>
-                <span class="badge badge-pill badge-warning notification">3</span>
-            </a>
-            <a href="#">
-                <i class="fa fa-envelope"></i>
-                <span class="badge badge-pill badge-success notification">7</span>
-            </a>
-            <a href="#">
-                <i class="fa fa-cog"></i>
-                <span class="badge-sonar"></span>
-            </a>
-            <a href="#">
-                <i class="fa fa-power-off"></i>
-            </a>
-        </div>
-    </nav>
-</div>
-<div class="wrapper">
-    <div class="main" id="main">
-
-
+            <!-- sidebar-content  -->
+            <div class="sidebar-footer">
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">7</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
     </div>
-</div>
+    <div class="wrapper">
+        <div class="main" id="main">
+            <section class="card_list">
+                <div class="card_i">
+                    <div class="slider_img" data-slideout-ignore>
+                        <img class="slider-i" src="img/15696910526_83c0650364_b.jpg" alt="">
+                        <img class="slider-i" src="img/c195b50cba8850ea0545f5dd2ed03645.jpg" alt="">
+                        <img class="slider-i" src="img/120586_78e4571c4a1f445eaa8be3ee9e502380.jpg" alt="">
+                    </div>
+                    <div class="card_cont">
+                        <div class="overflow-icon" title="Пути">
+                            <i class="fa fa-map"></i>
+                        </div>
+                        <div class="overflow-text">
+                            <p>Ысык-куль</p>
 
-<footer>
-    <div class="tab-nav-container">
-        <div class="tab active teal">
-            <svg width="20" height="20" class="svg-icon" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 18.5V13.0925C21 11.3237 21 10.4394 20.649 9.65764C20.2979 8.87593 19.6369 8.28837 18.3149 7.11325L17.3149 6.22437C14.7855 3.976 13.5208 2.85182 12 2.85182C10.4792 2.85182 9.2145 3.976 6.68509 6.22437L5.68509 7.11325C4.36308 8.28837 3.70208 8.87593 3.35104 9.65764C3 10.4394 3 11.3237 3 13.0925V18.5C3 19.4319 3 19.8978 3.15224 20.2654C3.35523 20.7554 3.74458 21.1448 4.23463 21.3478C4.60218 21.5 5.06812 21.5 6 21.5H6.33333C6.95331 21.5 7.26331 21.5 7.51764 21.4319C8.20782 21.2469 8.74692 20.7078 8.93185 20.0176C9 19.7633 9 19.4533 9 18.8333V16.5C9 14.8431 10.3431 13.5 12 13.5C13.6569 13.5 15 14.8431 15 16.5V18.8333C15 19.4533 15 19.7633 15.0681 20.0176C15.2531 20.7078 15.7922 21.2469 16.4824 21.4319C16.7367 21.5 17.0467 21.5 17.6667 21.5H18C18.9319 21.5 19.3978 21.5 19.7654 21.3478C20.2554 21.1448 20.6448 20.7554 20.8478 20.2654C21 19.8978 21 19.4319 21 18.5Z"
-                />
-            </svg>
+                            <svg x="0px" y="0px"
+                                 viewBox="0 0 284.159 284.159" style="enable-background:new 0 0 284.159 284.159;"
+                                 xml:space="preserve">
+<g>
+	<path d="M279.467,57.158L237.453,14.25c-8.045-4.47-14.303-0.894-14.303,8.939v25.03H89.062
+		c-82.24,0-80.453,57.211-80.453,62.574v62.574c0,0,35.757-34.863,35.757-35.757v-25.924c0,0.894,1.788-27.711,44.696-27.711H223.15
+		v25.03c0,9.833,6.257,13.409,14.303,8.939l42.014-42.908C285.724,67.885,285.724,63.415,279.467,57.158z M275.891,110.793
+		c0,0-35.757,34.863-35.757,35.757v25.924c0-0.894-1.788,27.711-44.696,27.711H61.351v-25.03c0-9.833-6.257-13.409-14.303-8.939
+		L5.034,209.124c-6.257,6.257-7.151,10.727,0,17.878l42.014,42.908c8.045,4.47,14.303,0.894,14.303-8.939v-25.03h134.088
+		c82.24,0,80.453-57.211,80.453-62.574v-62.574H275.891z"/>
+</g>
 
-        </div>
-        <div class="tab teal">
-            <svg height="20" class="svg-icon" version="1.1" viewBox="-1 0 136 136.21852" width="20">
-                <path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031 "/>
-            </svg>
+</svg>
 
+                            <p>Джалал-Абад</p>
+                        </div>
 
-        </div>
-        <div class="tab teal">
-            <svg width="20" height="20" class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.82841 14.7574C7.30488 13.967 7 13.0191 7 12C7 10.9809 7.30487 10.0331 7.82838 9.24263L4.25704 5.67128C2.84636 7.39515 2 9.59874 2 12C2 14.4013 2.84637 16.6049 4.25707 18.3287L7.82841 14.7574ZM5.67128 19.743C7.39515 21.1536 9.59874 22 12 22C14.4013 22 16.6048 21.1536 18.3287 19.743L14.7574 16.1716C13.9669 16.6951 13.0191 17 12 17C10.9809 17 10.0331 16.6951 9.24263 16.1716L5.67128 19.743ZM16.1716 14.7574L19.7429 18.3287C21.1536 16.6049 22 14.4013 22 12C22 9.59874 21.1536 7.39515 19.743 5.67128L16.1716 9.24263C16.6951 10.0331 17 10.9809 17 12C17 13.0191 16.6951 13.967 16.1716 14.7574ZM14.7574 7.82841L18.3287 4.25707C16.6049 2.84637 14.4013 2 12 2C9.59872 2 7.39512 2.84637 5.67125 4.25707L9.24259 7.82841C10.033 7.30488 10.9809 7 12 7C13.0191 7 13.967 7.30488 14.7574 7.82841Z"
-                      fill="#262F56"/>
-            </svg>
-
-        </div>
-        <div class="tab teal">
-            <svg width="20" height="20" class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.0825 2.61573C11.4307 1.81285 12.5693 1.81285 12.9175 2.61573L15.0238 7.47316C15.1687 7.80732 15.4838 8.03626 15.8464 8.07081L21.117 8.57304C21.9882 8.65605 22.34 9.73892 21.684 10.3181L17.7152 13.8224C17.4422 14.0635 17.3218 14.4339 17.401 14.7894L18.5521 19.9573C18.7423 20.8115 17.8212 21.4807 17.0676 21.0358L12.5084 18.3441C12.1948 18.159 11.8052 18.159 11.4916 18.3441L6.93241 21.0358C6.17882 21.4807 5.25768 20.8115 5.44794 19.9573L6.59899 14.7894C6.67817 14.4339 6.55781 14.0635 6.28479 13.8224L2.31599 10.3181C1.66 9.73892 2.01184 8.65605 2.88301 8.57304L8.1536 8.07081C8.51618 8.03626 8.8313 7.80732 8.9762 7.47316L11.0825 2.61573Z"
-                      fill="#262F56"/>
-            </svg>
+                        <div class="overflow-icon" title="Пути">
+                            <i class="far fa-star"></i>
+                        </div>
 
 
-        </div>
-        <div class="tab-menu teal">
-            <svg width="20" height="20" style="margin-top: -6px" class="svg-icon" viewBox="0 0 24 24"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 21H21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3 14H21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3 7H21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+
+
+                    </div>
+                    <div class="card_cont">
+                        <div class="overflow-icon" title="Модель машины">
+                            <i style="font-size: 14px;" class="fas fa-car-alt"></i>
+                        </div>
+                        <div class="overflow-text">
+                            <p>Mersedes-Benz e34</p>
+                        </div>
+
+                    </div>
+                    <div class="card_cont">
+                        <div class="overflow-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <a href="tel:=+996777777777">
+                        <div class="overflow-text">
+
+                            <p><i class="fad fa-arrow-right mr-1"></i>+996777777777</p>
+                        </div>
+                        </a>
+                        <a href="#">
+                        <div class="overflow-icon">
+                            <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="card_cont">
+                        <div class="overflow-icon" title="Модель машины">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="overflow-text">
+                            <p>Акылбеков Амантур</p>
+                        </div>
+                        <div class="overflow-icon" style="border-color: RGB(152, 205, 153)" title="Надёжный">
+                            <i style="font-size: 14px; color: green;" class="fas fa-shield-check"></i>
+                        </div>
+                        <div class="overflow-icon ml-1" style="border-color: dodgerblue" title="Подтвержденный">
+                            <i style="font-size: 14px; color: dodgerblue" class="fas fa-badge-check"></i>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </section>
+
         </div>
     </div>
-</footer>
+
+    <footer>
+        <div class="tab-nav-container">
+            <div class="tab active teal">
+                <svg width="20" height="20" class="svg-icon" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 18.5V13.0925C21 11.3237 21 10.4394 20.649 9.65764C20.2979 8.87593 19.6369 8.28837 18.3149 7.11325L17.3149 6.22437C14.7855 3.976 13.5208 2.85182 12 2.85182C10.4792 2.85182 9.2145 3.976 6.68509 6.22437L5.68509 7.11325C4.36308 8.28837 3.70208 8.87593 3.35104 9.65764C3 10.4394 3 11.3237 3 13.0925V18.5C3 19.4319 3 19.8978 3.15224 20.2654C3.35523 20.7554 3.74458 21.1448 4.23463 21.3478C4.60218 21.5 5.06812 21.5 6 21.5H6.33333C6.95331 21.5 7.26331 21.5 7.51764 21.4319C8.20782 21.2469 8.74692 20.7078 8.93185 20.0176C9 19.7633 9 19.4533 9 18.8333V16.5C9 14.8431 10.3431 13.5 12 13.5C13.6569 13.5 15 14.8431 15 16.5V18.8333C15 19.4533 15 19.7633 15.0681 20.0176C15.2531 20.7078 15.7922 21.2469 16.4824 21.4319C16.7367 21.5 17.0467 21.5 17.6667 21.5H18C18.9319 21.5 19.3978 21.5 19.7654 21.3478C20.2554 21.1448 20.6448 20.7554 20.8478 20.2654C21 19.8978 21 19.4319 21 18.5Z"
+                    />
+                </svg>
+
+            </div>
+            <div class="tab teal">
+                <svg height="20" class="svg-icon" version="1.1" viewBox="-1 0 136 136.21852" width="20">
+                    <path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031 "/>
+                </svg>
+
+
+            </div>
+            <div class="tab teal">
+                <svg width="20" height="20" class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.82841 14.7574C7.30488 13.967 7 13.0191 7 12C7 10.9809 7.30487 10.0331 7.82838 9.24263L4.25704 5.67128C2.84636 7.39515 2 9.59874 2 12C2 14.4013 2.84637 16.6049 4.25707 18.3287L7.82841 14.7574ZM5.67128 19.743C7.39515 21.1536 9.59874 22 12 22C14.4013 22 16.6048 21.1536 18.3287 19.743L14.7574 16.1716C13.9669 16.6951 13.0191 17 12 17C10.9809 17 10.0331 16.6951 9.24263 16.1716L5.67128 19.743ZM16.1716 14.7574L19.7429 18.3287C21.1536 16.6049 22 14.4013 22 12C22 9.59874 21.1536 7.39515 19.743 5.67128L16.1716 9.24263C16.6951 10.0331 17 10.9809 17 12C17 13.0191 16.6951 13.967 16.1716 14.7574ZM14.7574 7.82841L18.3287 4.25707C16.6049 2.84637 14.4013 2 12 2C9.59872 2 7.39512 2.84637 5.67125 4.25707L9.24259 7.82841C10.033 7.30488 10.9809 7 12 7C13.0191 7 13.967 7.30488 14.7574 7.82841Z"
+                          fill="#262F56"/>
+                </svg>
+
+            </div>
+            <div class="tab teal">
+                <svg width="20" height="20" class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0825 2.61573C11.4307 1.81285 12.5693 1.81285 12.9175 2.61573L15.0238 7.47316C15.1687 7.80732 15.4838 8.03626 15.8464 8.07081L21.117 8.57304C21.9882 8.65605 22.34 9.73892 21.684 10.3181L17.7152 13.8224C17.4422 14.0635 17.3218 14.4339 17.401 14.7894L18.5521 19.9573C18.7423 20.8115 17.8212 21.4807 17.0676 21.0358L12.5084 18.3441C12.1948 18.159 11.8052 18.159 11.4916 18.3441L6.93241 21.0358C6.17882 21.4807 5.25768 20.8115 5.44794 19.9573L6.59899 14.7894C6.67817 14.4339 6.55781 14.0635 6.28479 13.8224L2.31599 10.3181C1.66 9.73892 2.01184 8.65605 2.88301 8.57304L8.1536 8.07081C8.51618 8.03626 8.8313 7.80732 8.9762 7.47316L11.0825 2.61573Z"
+                          fill="#262F56"/>
+                </svg>
+
+
+            </div>
+            <div class="tab-menu teal">
+                <svg width="20" height="20" style="margin-top: -6px" class="svg-icon" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 21H21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 14H21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 7H21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
 </div>
 
 
 <script src="js/slideout.js"></script>
+<script src="lib/slick/slick.min.js"></script>
 
 <script src="js/main.js"></script>
 

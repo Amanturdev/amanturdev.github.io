@@ -29,28 +29,38 @@ tabs.forEach(clickedTab => {
         clickedTab.classList.add('active');
     });
 });
+$(document).ready(function(){
+    $(".sidebar-dropdown > a").click(function() {
+        $(".sidebar-submenu").slideUp(200);
+        if (
+            $(this)
+                .parent()
+                .hasClass("active")
+        ) {
+            $(".sidebar-dropdown").removeClass("active");
+            $(this)
+                .parent()
+                .removeClass("active");
+        } else {
+            $(".sidebar-dropdown").removeClass("active");
+            $(this)
+                .next(".sidebar-submenu")
+                .slideDown(200);
+            $(this)
+                .parent()
+                .addClass("active");
+        }
+    });
 
-$(".sidebar-dropdown > a").click(function() {
-    $(".sidebar-submenu").slideUp(200);
-    if (
-        $(this)
-            .parent()
-            .hasClass("active")
-    ) {
-        $(".sidebar-dropdown").removeClass("active");
-        $(this)
-            .parent()
-            .removeClass("active");
-    } else {
-        $(".sidebar-dropdown").removeClass("active");
-        $(this)
-            .next(".sidebar-submenu")
-            .slideDown(200);
-        $(this)
-            .parent()
-            .addClass("active");
-    }
+    $('.slider_img').slick({
+        dots: true,
+
+        speed: 500,
+        lazyLoad: 'ondemand',
+    });
 });
+
+
 
 
 
