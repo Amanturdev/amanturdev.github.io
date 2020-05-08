@@ -490,7 +490,7 @@ header {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
-  content: "\f111";
+  content: "\f101";
   font-family: "Font Awesome 5 Pro";
   font-weight: 400;
   font-style: normal;
@@ -717,20 +717,17 @@ header {
   }
 }
 .overflow-textarea{
-  padding: 0px 10px;
+  padding: 5px 10px;
   width: calc(100% - 40px);
   min-height: 30px;
   max-height: 100px;
   overflow-x: hidden;
   overflow-y: scroll;
   border-radius: 6px;
-  background: red;
-  display: flex;
-  align-items: center;
-  color: white;
   margin: 0 10px;
   font-family: 'Yandex Sans Display';
   font-weight: bold;
+  border: 1px solid rgba(219,219,219,1);
 
 }
 /* width */
@@ -742,19 +739,19 @@ header {
 
 /* Track */
 .overflow-textarea::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 2px #ffffff;
+  box-shadow: inset 0 0 2px #000000;
   border-radius: 5px;
 }
 
 /* Handle */
 .overflow-textarea::-webkit-scrollbar-thumb {
-  background: #ffffff;
+  background: #000000;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 .overflow-textarea::-webkit-scrollbar-thumb:hover {
-  background: ghostwhite;
+  background: #000000;
 }
 
 
