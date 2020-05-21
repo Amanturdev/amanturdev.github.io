@@ -89,6 +89,7 @@ html {
 .menu {
   height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   padding-top: 35px;
   padding-bottom: 70px;
 }
