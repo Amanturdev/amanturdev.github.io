@@ -69,7 +69,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-right-color: #000000;
+  border-right-color: var(--tab-color);
   animation: 1s load infinite linear;
 }
 
