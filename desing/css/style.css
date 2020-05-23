@@ -48,6 +48,56 @@ html {
   box-sizing: border-box !important;
 }
 
+.selectdiv {
+  position: relative;
+  /*Don't really need this just for demo styling*/
+  float: left;
+  min-width: 20px;
+  margin: 20px;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}
+
+.selectdiv:after {
+  content: "<>";
+  font: 17px "Consolas", monospace;
+  color: #333;
+  transform: rotate(90deg);
+  right: 11px;
+  /*Adjust for position however you want*/
+  top: 18px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  /*left line */
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
 .preloader {
   position: fixed;
   background: #ffffff;
@@ -303,7 +353,6 @@ html {
 
 .main {
   background: RGBA(231, 239, 250, 1);
-  display: flex;
   min-height: 100vh;
   padding-top: 35px;
 }
@@ -1070,4 +1119,129 @@ a, a:hover, a:active, a:focus {
     margin: 10px 0;
     width: 100%;
   }
+}
+.login-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  /* Label */
+  /* active */
+  /* Underline */
+  /* active */
+  /* Highlight */
+  /* active */
+  /* Animations */
+  /* Button */
+  /* Button modifiers */
+}
+.login-section h1 {
+  color: #636363;
+}
+.login-section h3 {
+  color: #4a89dc;
+}
+.login-section form {
+  width: 380px;
+  margin: 20px auto;
+  padding: 3em 2em 2em 2em;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  height: 250px;
+  /*box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;*/
+}
+@media screen and (max-width: 380px) {
+  .login-section form {
+    width: 100%;
+  }
+}
+.login-section .group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.login-section input {
+  font-size: 14px;
+  padding: 10px 10px 10px 5px;
+  -webkit-appearance: none;
+  display: block;
+  background: #fafafa;
+  color: #636363;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #757575;
+}
+.login-section input:focus {
+  outline: none;
+}
+.login-section label {
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: all 0.2s ease;
+}
+.login-section input:focus ~ label, .login-section input.used ~ label {
+  top: -20px;
+  transform: scale(0.75);
+  left: -2px;
+  /* font-size: 14px; */
+  color: #4a89dc;
+}
+.login-section .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.login-section .bar:before, .login-section .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #4a89dc;
+  transition: all 0.2s ease;
+}
+.login-section .bar:before {
+  left: 50%;
+}
+.login-section .bar:after {
+  right: 50%;
+}
+.login-section input:focus ~ .bar:before, .login-section input:focus ~ .bar:after {
+  width: 50%;
+}
+.login-section .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.login-section input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+@keyframes inputHighlighter {
+  from {
+    background: #4a89dc;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+.login-section .buttonBlue {
+  background: #4a89dc;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, 0.5);
+  color: #ffffff;
+}
+.login-section .buttonBlue:hover {
+  background: #357bd8;
 }
