@@ -60,18 +60,16 @@ html {
   transition: 0.5s;
   overflow: hidden;
   visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circular {
   animation: rotate 2s linear infinite;
   height: 50px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
   transition: all 0.2s ease;
-  transform: translate(-50%, -50%) rotate(360deg);
   width: 50px;
-  z-index: 4;
 }
 
 .path {
@@ -79,14 +77,14 @@ html {
   stroke-dashoffset: 0;
   animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
   stroke-linecap: round;
-  stroke: #3498db;
+  stroke: var(--tab-color);
 }
 @keyframes rotate {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes dash {
