@@ -95,7 +95,7 @@ html {
 }
 
 .sidebar-desktop {
-  position: absolute;
+  position: fixed;
   top: 200px;
   left: 10px;
   background: RGBA(231, 239, 250, 1);
@@ -156,7 +156,7 @@ html {
 }
 
 .menu-desktop {
-  position: absolute;
+  position: fixed;
   left: 100px;
   top: 200px;
   width: 0;

@@ -92,7 +92,7 @@ html{
   padding-bottom: 70px;
 }
 .sidebar-desktop{
-  position: absolute;
+  position: fixed;
   top: 200px;
   left: 10px;
   background: RGBA(231, 239, 250, 1);
@@ -158,7 +158,7 @@ html{
   overflow: hidden;
 }
 .menu-desktop{
-  position: absolute;
+  position: fixed;
   left: 100px;
   top: 200px;
   width: 0;
