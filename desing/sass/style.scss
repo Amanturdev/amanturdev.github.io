@@ -91,6 +91,213 @@ html{
   padding-top: 35px;
   padding-bottom: 70px;
 }
+.sidebar-desktop{
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  background: RGBA(231, 239, 250, 1);
+  width: 75px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 99999;
+}
+.selector-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 60px;
+    svg{
+      fill: var(--tab-color);
+      path{
+        fill: var(--tab-color);
+        stroke: var(--tab-color);
+      }
+    }
+
+  }
+  :hover{
+    background: var(--tab-color);
+    svg{
+      fill: #ffffff;
+      path{
+        fill: #ffffff;
+        stroke: #ffffff;
+      }
+    }
+  }
+  //:focus {
+  //  transform: scale(1.2);
+  //  background: rgba(0, 0, 0, 0.9);
+  //  //box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+  //}
+}
+.menu-desktop .sidebar::-webkit-scrollbar-track
+{
+  background-color: #F5F5F5;
+}
+
+.menu-desktop .sidebar::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.menu-desktop .sidebar::-webkit-scrollbar-thumb
+{
+  background-color: rgba(49, 53, 61, .5);
+}
+.menu-desktop_active{
+  width: 280px !important;
+  opacity: 1!important;
+  overflow: hidden;
+}
+.menu-desktop{
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  width: 0;
+  height: 400px !important;
+  z-index: 999999;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(49, 53, 61, 1);
+  transition: .5s;
+  opacity: 0;
+
+
+  .sidebar-header {
+    padding: 20px;
+    overflow: hidden;
+    color: #ffffff;
+  }
+
+  .sidebar-header .user-pic {
+    float: left;
+    width: 60px;
+    padding: 2px;
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+  }
+
+  .sidebar-header .user-pic img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .sidebar-header .user-info {
+    float: left;
+  }
+
+  .sidebar-header .user-info > span {
+    display: block;
+  }
+
+  .sidebar-header .user-info .user-role {
+    font-size: 12px;
+  }
+
+  .sidebar-header .user-info .user-status {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+
+  .sidebar-header .user-info .user-status i {
+    font-size: 8px;
+    margin-right: 4px;
+    color: #5cb85c;
+  }
+
+  .sidebar {
+    width: 280px;
+    height: 400px;
+    background: rgba(49, 53, 61, 1);
+    position: absolute;
+    overflow-y: scroll;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+  .sidebar #leftside-navigation ul,
+  .sidebar #leftside-navigation ul ul {
+    margin: -2px 0 0;
+    padding: 0;
+  }
+  .sidebar #leftside-navigation ul li {
+    list-style-type: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .sidebar #leftside-navigation ul li.active > a {
+    color: #1abc9c;
+  }
+  .sidebar #leftside-navigation ul li.active ul {
+    display: block;
+  }
+  .sidebar #leftside-navigation ul li a {
+    color: #aeb2b7;
+    text-decoration: none;
+    display: block;
+    padding: 18px 0 18px 25px;
+    font-size: 12px;
+    outline: 0;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
+  .sidebar #leftside-navigation ul li a:hover {
+    color: #ffffff;
+  }
+  .sidebar #leftside-navigation ul li a span {
+    display: inline-block;
+  }
+  .sidebar #leftside-navigation ul li a i {
+    width: 20px;
+  }
+  .sidebar #leftside-navigation ul li a i .fa-angle-left,
+  .sidebar #leftside-navigation ul li a i .fa-angle-right {
+    padding-top: 3px;
+  }
+  .sidebar #leftside-navigation ul ul {
+    display: none;
+  }
+  .sidebar #leftside-navigation ul ul li {
+    background: rgba(69, 73, 80, 1);
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: none;
+  }
+  .sidebar #leftside-navigation ul ul li a {
+    font-size: 12px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    color: #aeb2b7;
+  }
+
+
+
+
+
+
+
+
+}
+
+
+
+
 .wrapper{
   overflow-x: hidden;
   width: 1100px;
@@ -272,6 +479,13 @@ header {
   }
 }
 @media screen and (max-width: 800px) {
+  .sidebar-desktop{
+    display: none !important;
+    overflow: hidden;
+  }
+  .menu-desktop{
+    display: none !important;
+  }
   .tab-nav-container {
     padding: 0px;
   }

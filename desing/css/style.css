@@ -94,6 +94,179 @@ html {
   padding-bottom: 70px;
 }
 
+.sidebar-desktop {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  background: RGBA(231, 239, 250, 1);
+  width: 75px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.selector-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.selector-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 60px;
+}
+.selector-menu a svg {
+  fill: var(--tab-color);
+}
+.selector-menu a svg path {
+  fill: var(--tab-color);
+  stroke: var(--tab-color);
+}
+.selector-menu :hover {
+  background: var(--tab-color);
+}
+.selector-menu :hover svg {
+  fill: #ffffff;
+}
+.selector-menu :hover svg path {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.menu-desktop .sidebar::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+.menu-desktop .sidebar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.menu-desktop .sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(49, 53, 61, 0.5);
+}
+
+.menu-desktop_active {
+  width: 280px !important;
+  opacity: 1 !important;
+  overflow: hidden;
+}
+
+.menu-desktop {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  width: 0;
+  height: 400px !important;
+  z-index: 999999;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #31353d;
+  transition: 0.5s;
+  opacity: 0;
+}
+.menu-desktop .sidebar-header {
+  padding: 20px;
+  overflow: hidden;
+  color: #ffffff;
+}
+.menu-desktop .sidebar-header .user-pic {
+  float: left;
+  width: 60px;
+  padding: 2px;
+  border-radius: 12px;
+  margin-right: 15px;
+  overflow: hidden;
+}
+.menu-desktop .sidebar-header .user-pic img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.menu-desktop .sidebar-header .user-info {
+  float: left;
+}
+.menu-desktop .sidebar-header .user-info > span {
+  display: block;
+}
+.menu-desktop .sidebar-header .user-info .user-role {
+  font-size: 12px;
+}
+.menu-desktop .sidebar-header .user-info .user-status {
+  font-size: 11px;
+  margin-top: 4px;
+}
+.menu-desktop .sidebar-header .user-info .user-status i {
+  font-size: 8px;
+  margin-right: 4px;
+  color: #5cb85c;
+}
+.menu-desktop .sidebar {
+  width: 280px;
+  height: 400px;
+  background: #31353d;
+  position: absolute;
+  overflow-y: scroll;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+}
+.menu-desktop .sidebar #leftside-navigation ul,
+.menu-desktop .sidebar #leftside-navigation ul ul {
+  margin: -2px 0 0;
+  padding: 0;
+}
+.menu-desktop .sidebar #leftside-navigation ul li {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.menu-desktop .sidebar #leftside-navigation ul li.active > a {
+  color: #1abc9c;
+}
+.menu-desktop .sidebar #leftside-navigation ul li.active ul {
+  display: block;
+}
+.menu-desktop .sidebar #leftside-navigation ul li a {
+  color: #aeb2b7;
+  text-decoration: none;
+  display: block;
+  padding: 18px 0 18px 25px;
+  font-size: 12px;
+  outline: 0;
+  transition: all 200ms ease-in;
+}
+.menu-desktop .sidebar #leftside-navigation ul li a:hover {
+  color: #ffffff;
+}
+.menu-desktop .sidebar #leftside-navigation ul li a span {
+  display: inline-block;
+}
+.menu-desktop .sidebar #leftside-navigation ul li a i {
+  width: 20px;
+}
+.menu-desktop .sidebar #leftside-navigation ul li a i .fa-angle-left,
+.menu-desktop .sidebar #leftside-navigation ul li a i .fa-angle-right {
+  padding-top: 3px;
+}
+.menu-desktop .sidebar #leftside-navigation ul ul {
+  display: none;
+}
+.menu-desktop .sidebar #leftside-navigation ul ul li {
+  background: #454950;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: none;
+}
+.menu-desktop .sidebar #leftside-navigation ul ul li a {
+  font-size: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #aeb2b7;
+}
+
 .wrapper {
   overflow-x: hidden;
   width: 1100px;
@@ -272,6 +445,15 @@ header .slot {
   }
 }
 @media screen and (max-width: 800px) {
+  .sidebar-desktop {
+    display: none !important;
+    overflow: hidden;
+  }
+
+  .menu-desktop {
+    display: none !important;
+  }
+
   .tab-nav-container {
     padding: 0px;
   }
