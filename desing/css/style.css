@@ -48,54 +48,43 @@ html {
   box-sizing: border-box !important;
 }
 
-.selectdiv {
-  position: relative;
-  /*Don't really need this just for demo styling*/
-  float: left;
-  min-width: 20px;
-  margin: 20px;
+.filter-form {
+  display: flex;
+  padding: 10px;
 }
-
-/* IE11 hide native button (thanks Matt!) */
-select::-ms-expand {
-  display: none;
+.filter-form select {
+  width: 200px;
+  padding: 10px;
+  font-family: "Yandex Sans Display";
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  outline: none;
 }
-
-.selectdiv:after {
-  content: "<>";
-  font: 17px "Consolas", monospace;
-  color: #333;
-  transform: rotate(90deg);
-  right: 11px;
-  /*Adjust for position however you want*/
-  top: 18px;
-  padding: 0 0 2px;
-  border-bottom: 1px solid #999;
-  /*left line */
-  position: absolute;
-  pointer-events: none;
+.filter-form select:active {
+  background: dodgerblue;
+  color: #ffffff;
 }
-
-.selectdiv select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* Add some styling */
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  height: 50px;
-  float: right;
-  margin: 5px 0px;
-  padding: 0px 24px;
-  font-size: 16px;
-  line-height: 1.75;
-  color: #333;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  -ms-word-break: normal;
-  word-break: normal;
+.filter-form select:hover {
+  background: #31353e;
+  color: #ffffff;
+}
+.filter-form select:first-child {
+  margin-right: 20px;
+}
+.filter-form button {
+  width: 40px;
+  border: 1px solid #dbdbdb;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-left: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.filter-form button:hover {
+  color: #ffffff;
+  background: #31353e;
 }
 
 .preloader {
@@ -1110,7 +1099,7 @@ a, a:hover, a:active, a:focus {
   font-size: 13px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .user_between {
     justify-content: space-evenly;
   }
@@ -1118,6 +1107,14 @@ a, a:hover, a:active, a:focus {
   .overflow_data {
     margin: 10px 0;
     width: 100%;
+  }
+
+  .filter-form {
+    width: 100%;
+  }
+  .filter-form select {
+    width: 150px;
+    font-size: 12px;
   }
 }
 .login-section {
@@ -1151,11 +1148,6 @@ a, a:hover, a:active, a:focus {
   border: 1px solid #ebebeb;
   height: 250px;
   /*box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;*/
-}
-@media screen and (max-width: 380px) {
-  .login-section form {
-    width: 100%;
-  }
 }
 .login-section .group {
   position: relative;
@@ -1244,4 +1236,18 @@ a, a:hover, a:active, a:focus {
 }
 .login-section .buttonBlue:hover {
   background: #357bd8;
+}
+
+@media screen and (max-width: 380px) {
+  form {
+    width: 100%;
+  }
+
+  .filter-form {
+    width: 100%;
+  }
+  .filter-form select {
+    width: 40% !important;
+    overflow-x: hidden;
+  }
 }
