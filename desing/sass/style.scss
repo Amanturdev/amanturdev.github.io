@@ -87,6 +87,35 @@ html{
   }
 }
 
+.search-form{
+  display: flex;
+  padding: 10px;
+
+  input{
+    width: 400px;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    padding-left: 15px;
+    outline: none;
+  }
+
+  button{
+    width: 40px;
+    height: 35px;
+    border: 1px solid #dbdbdb;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    &:hover{
+      color: #ffffff;
+      background: #31353e;
+    }
+  }
+}
+
 .preloader {
   position: fixed;
   background: #ffffff;
@@ -1386,6 +1415,34 @@ a,a:hover,a:active,a:focus{
     select {
       width: 40% !important;
       overflow-x: hidden;
+    }
+  }
+  .search-form{
+    display: flex;
+    padding: 10px;
+
+    input{
+      width: calc(100% - 50px);
+      border: 1px solid #dbdbdb;
+      border-radius: 10px;
+      padding-left: 15px;
+      outline: none;
+    }
+
+    button{
+      width: 40px;
+      height: 35px;
+      border: 1px solid #dbdbdb;
+      background: #ffffff;
+      border-radius: 10px;
+      margin-left: 10px;
+      outline: none;
+      cursor: pointer;
+      font-size: 15px;
+      &:hover{
+        color: #ffffff;
+        background: #31353e;
+      }
     }
   }
 }

@@ -88,6 +88,33 @@ html {
   background: #31353e;
 }
 
+.search-form {
+  display: flex;
+  padding: 10px;
+}
+.search-form input {
+  width: 400px;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding-left: 15px;
+  outline: none;
+}
+.search-form button {
+  width: 40px;
+  height: 35px;
+  border: 1px solid #dbdbdb;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-left: 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+.search-form button:hover {
+  color: #ffffff;
+  background: #31353e;
+}
+
 .preloader {
   position: fixed;
   background: #ffffff;
@@ -1266,5 +1293,32 @@ a, a:hover, a:active, a:focus {
   .filter-form select {
     width: 40% !important;
     overflow-x: hidden;
+  }
+
+  .search-form {
+    display: flex;
+    padding: 10px;
+  }
+  .search-form input {
+    width: calc(100% - 50px);
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    padding-left: 15px;
+    outline: none;
+  }
+  .search-form button {
+    width: 40px;
+    height: 35px;
+    border: 1px solid #dbdbdb;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .search-form button:hover {
+    color: #ffffff;
+    background: #31353e;
   }
 }
