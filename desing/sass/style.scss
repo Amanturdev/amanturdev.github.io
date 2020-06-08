@@ -1234,7 +1234,7 @@ a,a:hover,a:active,a:focus{
   
   .messege-item{
     margin-top: 10px;
-    width: 300px;
+    width: 340px;
     height: auto;
     background: #ffffff;
     padding: 5px;
@@ -1406,6 +1406,17 @@ a,a:hover,a:active,a:focus{
 
 
 @media screen and (max-width: 380px) {
+
+  .messeges-list{
+
+
+    .messege-item{
+
+      width: calc(100% - 20px);
+
+
+    }
+  }
   form{
     width: 100%;
   }
