@@ -1100,6 +1100,22 @@ a, a:hover, a:active, a:focus {
   font-size: 13px;
 }
 
+.messeges-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+.messeges-list .messege-item {
+  margin-top: 10px;
+  width: 300px;
+  height: auto;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 500px) {
   .user_between {
     justify-content: space-evenly;
